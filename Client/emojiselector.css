@@ -1,0 +1,73 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+#emojicontainer{
+    width: 400px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: 150%;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+#drawercontainer{
+    height: 140px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 420px;
+    transition: right 0.1s linear;
+}
+
+.drawer{
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.emoji{
+    padding: 2px;
+}
+
+.scroll{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#smileys{
+    background-color: #E6E6FA;
+}
+
+.selector{
+    height: 30px;
+    width: 30px;
+    margin: 0 5px 0 5px;
+    /* background-color: #E6E6FA; */
+    border-radius: 5px;
+}
+
+.selector:hover{
+    cursor: pointer;
+}
+
+.selector img{
+    max-width: 20px;
+    max-height: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

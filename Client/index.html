@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chat Room</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="emojiselector.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c123ad8ef2.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="index.js"></script>
+    <script defer src="emojiselector.js"></script>
+</head>
+<body>
+    <div id="messagingarea">
+        <div id="header">
+            <img src="box move left.png" id="back"> 
+            <div class="roominfo">
+                <div class="imagecontainer">
+                    <img src="roomimage.jpg" class="containerimage" id="groupimage">
+                </div>
+                <div class="roomtexts">
+                    <h4 id="groupname">Call of Duty Mobile Gamers</h4>
+                </div>
+            </div>
+            <img src="exitroom.png" id="exitroom">
+        </div>
+        <div id="body">
+            
+        </div>
+        <div id="footer">
+            <div id="emojicontainer">
+                <div id="drawercontainer">
+                    <div id="drawer0" class="drawer">
+                        <div id="row1">
+                            
+                        </div>
+                    </div>
+                    <div id="drawer1" class="drawer">
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😅</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😂</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤣</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😊</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😇</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙂</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😉</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😌</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😍</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😘</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😗</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😙</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😚</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😋</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😛</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😝</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😜</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤪</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧐</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤓</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😎</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😏</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😒</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😞</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😔</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😟</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😕</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙁</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">☹️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😣</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😖</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😫</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥺</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😢</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😤</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😠</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😡</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤯</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥵</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥶</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😨</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😥</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😓</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤗</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤔</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤫</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤥</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😶</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😐</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😑</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙄</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤧</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😯</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😮</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😴</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤤</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😪</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😵</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤐</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🥴</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤢</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤮</div>
+        
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😷</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤒</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤕</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤑</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤠</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😈</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👿</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👹</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👺</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤡</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👻</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">☠️</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤖</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🎃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😺</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😸</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😹</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😻</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😽</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😿</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">😾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👋</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤚</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🖐</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">✋</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🖖</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👌</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤏</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">✌️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤞</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤟</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤘</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤙</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👈</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👉</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👆</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🖕</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👇</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">☝️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👍</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👎</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">✊</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👊</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤛</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤜</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👏</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙌</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👐</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤝</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙏</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">✍️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💅</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💪</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦵</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦿</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦶</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👣</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👂</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦻</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧠</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦷</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦴</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👁</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👅</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💋</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🩸</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👶</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧒</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👱‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦰</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧔</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👵</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧓</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👴</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👳‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧕</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👮‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👮</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👮‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👷‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👷</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👷‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💂‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💂</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💂‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🕵️‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🕵️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍⚕️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍💼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🚒</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍⚕️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍⚕️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🌾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🌾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🌾</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🍳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🍳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🍳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🎓</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🎓</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🎓</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🎤</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🎤</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🎤</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🏫</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🏫</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🏫</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🏭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🏭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🏭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍💻</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍💻</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍💻</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍💼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍💼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🔧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🔧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🔧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🔬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🔬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🔬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🎨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🎨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🎨</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🚒</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🚒</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍✈️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍✈️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍✈️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🚀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🚀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🚀</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍⚖️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍⚖️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍⚖️</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👰‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👰‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤵‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤵</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤵‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👸</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤴</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦸‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦸‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦹‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦹</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🦹‍♂️</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🎄</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🎅</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧙‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧜</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧜‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧚‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧚‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤰</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤱</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🍼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🍼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🍼</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙇</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💁‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💁‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙅‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙅‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙆‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙆‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙋‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙋‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧏‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧏‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤦‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤦‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤷‍♀️</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙎‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙎‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙍‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙍‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💇‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💇‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💆‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💆‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧖‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧖‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💅</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🕺</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👯‍♀️</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👯‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🕴</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦽</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦽</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦽</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦼</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🚶‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🚶</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🚶‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍🦯</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🦯</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍🦯</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🏃‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🏃</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧍‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧍</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧍‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👭</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧑‍🤝‍🧑</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👬</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👫</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍❤️‍👩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💑</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍❤️‍👨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍❤️‍💋‍👩</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">💏</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍❤️‍💋‍👨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍❤️‍💋‍👨</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👪</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👩‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👩‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👩‍👧‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👩‍👦‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👩‍👧‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👨‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👨‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👨‍👧‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👨‍👦‍👦</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👨‍👧‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👩‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👩‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👩‍👧‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👩‍👦‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👩‍👧‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👦‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👧‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👨‍👧‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👦</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👦‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👧‍👦</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👩‍👧‍👧</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🗣</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👤</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👥</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👽</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👲</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👳‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👳</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">👄</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤶</div>
+                    </div>
+                    <div class="row">
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🙇‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🤷‍♂️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧎‍♀️</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧎</div>
+                        <div class="emoji" onclick="addEmoji(this.innerHTML)">🧎‍♂️</div>
+                    </div>
+                    </div>
+                    <div id="drawer2" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧤</div>
+                        </div>
+                        <div class="row">                        
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧥</div>    
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👞</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💄</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💼</div>
+                        </div>
+                    </div> 
+                    <div id="drawer3" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐻‍❄️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐷</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🙈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🙉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🙊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦅</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕷</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐟</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐪</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐩</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐕‍🦺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐈‍⬛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦡</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌱</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☘️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥀</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌑</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⭐️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚡️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☄️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛅️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☁️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❄️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☃️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛄️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☔️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🐫</div>
+                        </div>
+                    </div>
+                    <div id="drawer4" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥥</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥐</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦴</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍲</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍧</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥜</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☕️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧉</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🍽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧂</div>
+                        </div>
+                    </div>
+                    <div id="drawer5" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚽️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚾️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏒</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛳️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛸</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏋️‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏋️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏋️‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤼‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤼‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤸‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤸‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛹️‍♀️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛹️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛹️‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤾‍♀️</div>                       
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤾‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏌️‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏌️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏌️‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧘‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧘‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏄‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏄</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏄‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏊‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤽‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚣‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧗‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧗‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚵‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚴‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚴‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥉</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤹‍♂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤹‍♀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎤</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🥁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎮</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧩</div>
+                        </div>
+                    </div>
+                    <div id="drawer6" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦯</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚠</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✈️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛵️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚢</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚓️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛽️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎠</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛲️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛺️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏗</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛪️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕍</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏙</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌁</div>
+                        </div>
+                    </div>
+                    <div id="drawer7" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⌚️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⌨️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📼</div>
+        
+                        </div>
+                        <div class="row">                            
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☎️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧭</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⌛️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💵</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚖️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚙️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚔️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚰️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚱️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏺</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚗️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🩸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🦠</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧽</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🪑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎏</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✉️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📤</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📈</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📓</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧮</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖋</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✒️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✏️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔏</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔓</div>
+                        </div>
+                    </div>
+                    <div id="drawer8" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❤️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🧡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🖤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤍</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🤎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❣️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💓</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☮️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✝️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☪️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☸️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✡️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☯️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☦️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♈️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♉️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♊️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♋️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♌️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♍️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♎️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♏️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♐️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♑️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♒️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♓️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚛️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🉑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☢️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☣️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈚️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈷️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✴️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🉐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">㊙️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">㊗️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🅰️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🅱️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🅾️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❌</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⭕️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⛔️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♨️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚱</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❗️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">‼️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⁉️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">〽️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚠️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚜️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♻️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈯️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❇️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✳️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">❎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">Ⓜ️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🌀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚾</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♿️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🅿️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈂️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈳</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🛅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚼</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚮</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🈁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">ℹ️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🆓</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">0️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">1️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">2️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">3️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">4️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">5️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">6️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">7️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">8️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">9️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">#️⃣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">*️⃣</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏏️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">▶️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏮</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⏬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">◀️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔼</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⬅️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⬆️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⬇️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↗️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↘️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↙️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↖️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↔️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↕️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↪️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">↩️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⤴️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⤵️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔀</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✖️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♾</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💱</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">™️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">©️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">®️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">〰️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➰</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➿</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✔️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☑️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟠</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔵</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚫️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚪️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔺</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔻</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔸</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔹</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔶</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔷</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔳</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔲</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">▪️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">▫️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">◾️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">◽️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">◼️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">◻️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⬛️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⬜️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🟫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔇</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔊</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">📢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">👁‍🗨</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💬</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">💭</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🗯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♠️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♣️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♥️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♦️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🃏</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🀄️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕐</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕑</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕒</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕓</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕛</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕥</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕦</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🕧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🔽</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">➡️</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♚</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♜</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♝</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♟</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♔</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♕</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♖</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♗</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♘</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♙</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚀</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚂</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚃</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚄</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚅</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🂠</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚈</div>
+                        </div>
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚉</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚆</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⚇</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♡</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♦︎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♥︎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♣︎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">♠︎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☞</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">☛</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✯</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✡︎</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✪</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✫</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✤</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✧</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✣</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">✢</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">⇢</div>
+                        </div>
+                    </div>
+                    <div id="drawer9" class="drawer">
+                        <div class="row">
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏳️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏴</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏁</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🚩</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏳️‍🌈</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏳️‍⚧️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🏴‍☠️</div>
+                            <div class="emoji" onclick="addEmoji(this.innerHTML)">🎌</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll">
+                    <div id="frequent" class="selector"><img src="/emoji_selector_images/frequent.png"></div>
+                    <div id="smileys" class="selector"><img src="/emoji_selector_images/smileys.png"></div>
+                    <div id="clothes" class="selector"><img src="/emoji_selector_images/clothes.png"></div>
+                    <div id="animals" class="selector"><img src="/emoji_selector_images/animals.png"></div>
+                    <div id="foods" class="selector"><img src="/emoji_selector_images/foods.png"></div>
+                    <div id="sports" class="selector"><img src="/emoji_selector_images/sports.png"></div>
+                    <div id="transports" class="selector"><img src="/emoji_selector_images/transports.png"></div>
+                    <div id="objects" class="selector"><img src="/emoji_selector_images/objects.png"></div>
+                    <div id="hearts" class="selector"><img src="/emoji_selector_images/hearts.png"></div>
+                    <div id="flags" class="selector"><img src="/emoji_selector_images/flags.png"></div>
+                </div>
+            </div>
+            <i class="fa-regular fa-face-laugh" id="emojis"></i>
+            <input id="textarea" type="text" name="message" autofocus placeholder="Type a message">
+            <img src="sendicon.png" id="send">
+        </div>
+    </div>  
+    <div id="chatrooms">
+        <div id="header2">
+            <div class="imagecontainer" id="userimagecontainer">
+                <img class="containerimage" src="dummyimage.png" id="userimage">  
+            </div>  
+            <div class="username">
+                <h2 id="username">DarkSlayer</h2>
+            </div>
+            <img id="createroom" src="add.png">
+            <img id="joinroom" src="join.png">
+        </div>
+        <div id="search">
+            <input id="searcharea" autofocus placeholder="Search for my rooms">
+        </div>
+        <div id="chatroomlist"> 
+            <div id="chatroom">
+            </div> 
+        </div>
+    </div>
+    <div id="create">
+        <div class="create">
+            <div class="newroom">
+                <h2>New Room</h2>
+            </div>
+            <div class="roomcredentials">
+                <div class="roomname">
+                    <h4>Room Name</h4>
+                    <div class="warning" id="warning1"></div>
+                    <input type="text" id="createdroomname">
+                </div>
+                <div class="roompassword">
+                    <h4>Room Password</h4>
+                    <div class="warning" id="warning2"></div>
+                    <input type="password" id="createdroompassword" disabled="true">
+                </div>
+                <div class="roomothers">
+                    <div class="roomprivacy">
+                        <h3 id="public">Public</h3>
+                        <div id="privacyswitch">
+                            <div id="switch"></div>
+                        </div>
+                        <h3 id="private">Private</h3>
+                    </div>
+                    <div class="roomlimit">
+                        <h3>Room Limit</h3>
+                        <select name="rommnumber" id="roomnumber">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                            <option value="43">43</option>
+                            <option value="44">44</option>
+                            <option value="45">45</option>
+                            <option value="46">46</option>
+                            <option value="47">47</option>
+                            <option value="48">48</option>
+                            <option value="49">49</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="roomcreate">
+                <button id="cancel" class="buttons">Cancel</button>
+                <button id="created" class="buttons">Create</button>
+            </div>
+        </div>
+    </div>
+    <div id="join">
+        <div class="join">
+            <div class="joinroom">
+                <h2>Join Room</h2>
+                <img src="close.png" id="close">
+            </div>
+            <div class="searchrooms">
+                <input type="search" id="lookforrooms" placeholder="Search for rooms">
+                <button id="searchforroom">Search</button>
+            </div>
+            <div class="shorttext">
+                <h4>Popular Rooms</h4>
+            </div>
+            <div id="tharooms">
+                <div id="tharoomss">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="leaveroom">
+        <div class="leaveroom">
+            <div class="toppart"></div>
+            <div class="bottompart">
+                <h3>Are you sure you want to exit this room?</h3>
+                <div class="leavebuttons">
+                    <button id="stay">No, stay</button>
+                    <button id="leave">Yes, leave</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
