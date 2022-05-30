@@ -11,22 +11,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c123ad8ef2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js" integrity="sha512-M72KfQy4kPuLYC6CeTrN0eA17U1lXEMrr5qEJC/40CLdZGC3HpwPS0esQLqBHnxty2FIcuNdP9EqwSOCLEVJXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer type="module" src="index.js"></script>
     <script defer src="emojiselector.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script> -->
 </head>
 <body>
     <div id="messagingarea">
         <div id="header">
-            <img src="box move left.png" id="back"> 
+            <img src="./images/box move left.png" id="back"> 
             <div class="roominfo">
                 <div class="imagecontainer">
-                    <img src="roomimage.jpg" class="containerimage" id="groupimage">
+                    <img src="./images/roomimage.jpg" class="containerimage" id="groupimage">
                 </div>
                 <div class="roomtexts">
                     <h4 id="groupname">Call of Duty Mobile Gamers</h4>
                 </div>
             </div>
-            <img src="exitroom.png" id="exitroom">
+            <img src="./images/exitroom.png" id="exitroom">
         </div>
         <div id="body">
             
@@ -1776,19 +1778,19 @@
             </div>
             <i class="fa-regular fa-face-laugh" id="emojis"></i>
             <input id="textarea" type="text" name="message" autofocus placeholder="Type a message">
-            <img src="sendicon.png" id="send">
+            <img src="./images/sendicon.png" id="send">
         </div>
     </div>  
     <div id="chatrooms">
         <div id="header2">
             <div class="imagecontainer" id="userimagecontainer">
-                <img class="containerimage" src="dummyimage.png" id="userimage">  
+                <img class="containerimage" src="./images/dummyimage.png" id="userimage">  
             </div>  
             <div class="username">
                 <h2 id="username">DarkSlayer</h2>
             </div>
-            <img id="createroom" src="add.png">
-            <img id="joinroom" src="join.png">
+            <img id="createroom" src="./images/add.png">
+            <img id="joinroom" src="./images/join.png">
         </div>
         <div id="search">
             <input id="searcharea" autofocus placeholder="Search for my rooms">
@@ -1889,7 +1891,7 @@
         <div class="join">
             <div class="joinroom">
                 <h2>Join Room</h2>
-                <img src="close.png" id="close">
+                <img src="./images/close.png" id="close">
             </div>
             <div class="searchrooms">
                 <input type="search" id="lookforrooms" placeholder="Search for rooms">
@@ -1916,5 +1918,29 @@
             </div>
         </div>
     </div>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBTBTBLAN7gb5osupNwQ2cV1sAW8lxjiHc",
+          authDomain: "mini-chat-room-web-application.firebaseapp.com",
+          databaseURL: "https://mini-chat-room-web-application-default-rtdb.firebaseio.com",
+          projectId: "mini-chat-room-web-application",
+          storageBucket: "mini-chat-room-web-application.appspot.com",
+          messagingSenderId: "843605418421",
+          appId: "1:843605418421:web:923f3375d976e9cecef9fc",
+          measurementId: "G-WCEVN0KR2V"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script> -->
 </body>
 </html>

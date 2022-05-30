@@ -1,5 +1,5 @@
-
 /**Set of Functions that make the socket.io work on client side**/
+import DOMPurify from "dompurify";
 import { io } from "socket.io-client";
 const socket = io("http://localhost:3000");
 
@@ -49,16 +49,18 @@ var sendButton = document.getElementById("send");
 var textArea = document.getElementById("textarea");
 
 textArea.addEventListener('keydown', (event) => {
-    if (event.keyCode === 13 && !textArea.value == "") {
-        let message = textArea.value;
+    let purifiedTextArea = DOMPurify.sanitize(textArea.value);
+    if (event.keyCode === 13 && !purifiedTextArea == "") {
+        let message = purifiedTextArea;
             createMessage();
             socket.emit("send-message", message);
     }
 });
 
 sendButton.addEventListener('click', () => {
-    if (!textArea.value == ""){
-        let message = textArea.value;
+    let purifiedTextArea = DOMPurify.sanitize(textArea.value);
+    if (!purifiedTextArea == ""){
+        let message = purifiedTextArea;
             createMessage();
             socket.emit("send-message", message);
     }
@@ -70,7 +72,7 @@ let uniquePointer = 0;
 
 let lastSentMessage = "Hey, mummmy said that you should return what you stole from the shop";
 let numberOfNotifications = document.getElementsByClassName("wholemessages").length;
-let groupImage = "roomimage.jpg";
+let groupImage = "./images/roomimage.jpg";
 let numberOfMembers = "1";
 
 const connection = () => {
@@ -180,7 +182,7 @@ const createRoomList = (allrooms) => {
         <div class="numberofnotification">
             ${numberOfNotifications}
         </div>
-        <img class="notification" id="notification" src="notifications.svg">
+        <img class="notification" id="notification" src="./images/notifications.svg">
         </div>
         </div>`
 
@@ -198,7 +200,7 @@ const createMessage = () => {
 
     let wholeMessages = document.createElement("div");
     let nameTime = document.createElement("div");
-    let message = textArea.value;
+    let message = DOMPurify.sanitize(textArea.value);
     let messageDiv = document.createElement("div");
 
 
@@ -247,7 +249,7 @@ const createReceiverMessage = (message) => {
 
 const createdRoom = (allrooms) => {
     let value = allrooms.indexOf(roomName.value);
-    let RoomName = roomName.value;
+    let RoomName = DOMPurify.sanitize(roomName.value);
     if (roomName.value){
         if (value == -1 && RoomName.length != 20) {
             create.style.display = "none";
@@ -260,7 +262,7 @@ const createdRoom = (allrooms) => {
 }
 
 const leaveRoom = () => {
-    let RoomName = roomName.value;
+    let RoomName = DOMPurify.sanitize(roomName.value);
     socket.emit("leave-room", (RoomName))
 }
 
@@ -295,7 +297,7 @@ var searchArea = document.getElementById("searcharea");
 var chatRoomHide = document.getElementsByClassName("chatroomhide");
 
 back.addEventListener('click', () => {
-    if (back.getAttribute('src') === "box move left.png"){
+    if (back.getAttribute('src') === "./images/box move left.png"){
         chatRooms.style.width = "0";
         search.style.width = "0";
         header2.style.width = "0";
@@ -306,8 +308,8 @@ back.addEventListener('click', () => {
         for (let x = 0; x < chatRoomHide.length; x++){
             document.getElementsByClassName("chatroomhide")[x].style.display = "none";
         }
-        back.src = "box move right.png";
-    } else if (back.getAttribute('src') === "box move right.png"){
+        back.src = "./images/box move right.png";
+    } else if (back.getAttribute('src') === "./images/box move right.png"){
         chatRooms.style.width = "40%";
         search.style.width = "100%";
         header2.style.width = "40%";
@@ -319,7 +321,7 @@ back.addEventListener('click', () => {
         for (let x = 0; x < chatRoomHide.length; x++){
             document.getElementsByClassName("chatroomhide")[x].style.display = "flex";
         }
-        back.src = "box move left.png";
+        back.src = "./images/box move left.png";
     }
 })
 
@@ -366,8 +368,6 @@ document.getElementById("createroom").addEventListener("click", () => {
 })
 
 document.getElementById("created").addEventListener("click", () => {
-    let value = roomName.value;
-    console.log(value.length);
     if (roomName.value){
     socket.emit("retrieve-rooms2");
     }
@@ -409,6 +409,6 @@ document.getElementById("leave").addEventListener("click", () => {
 /*******************Searching for a room*************************/
 document.getElementById("searchforroom").addEventListener("click", () => {
     document.getElementById("tharoomss").textContent = "";
-    let roomname = document.getElementById("lookforrooms").value;
+    let roomname = DOMPurify.sanitize(document.getElementById("lookforrooms").value);
     socket.emit("lookforroom", (roomname));
 })
