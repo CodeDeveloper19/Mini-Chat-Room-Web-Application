@@ -85,7 +85,4 @@ io.on('connection', socket => {
 instrument(io, { auth: false });
 
 
-/********************DataBase */
-
-// const database = app.database();
 

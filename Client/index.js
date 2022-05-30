@@ -3,6 +3,30 @@ import DOMPurify from "dompurify";
 import { io } from "socket.io-client";
 const socket = io("http://localhost:3000");
 
+
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, set } from "firebase/database";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBTBTBLAN7gb5osupNwQ2cV1sAW8lxjiHc",
+  authDomain: "mini-chat-room-web-application.firebaseapp.com",
+  databaseURL: "https://mini-chat-room-web-application-default-rtdb.firebaseio.com",
+  projectId: "mini-chat-room-web-application",
+  storageBucket: "mini-chat-room-web-application.appspot.com",
+  messagingSenderId: "843605418421",
+  appId: "1:843605418421:web:923f3375d976e9cecef9fc",
+  measurementId: "G-WCEVN0KR2V"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
 socket.on('connect', () =>{
     connection();
     socket.emit("joined-message", socket.id);
@@ -371,6 +395,11 @@ document.getElementById("created").addEventListener("click", () => {
     if (roomName.value){
     socket.emit("retrieve-rooms2");
     }
+
+    const db = getDatabase();
+    set(ref(db, 'servers/'), {
+      server: roomName.value
+    });
 })
 
 document.getElementById("createdroomname").addEventListener("click", () => {
