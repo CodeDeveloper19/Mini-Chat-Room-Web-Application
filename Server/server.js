@@ -7,7 +7,23 @@ const io = require("socket.io")(3000, {
     }
 });
 
+
 io.on('connection', socket => {
+    // Executed during the start of the server
+    let all = Array.from(io.sockets.adapter.rooms.keys());
+    let allrooms = [];
+            
+    for (let i = 0; i < all.length; i++){
+        if (all[i].length != 20){
+            allrooms.push(all[i]);  //This helps limit the client ids which are always 20 digits
+        }
+    }
+
+    if (allrooms.length == 0){
+        socket.emit("server-start")
+    }
+    /********************************************/
+    
     socket.on("send-message",(message) => {
         let Id = socket.id;
         socket.broadcast.emit("receive-message", {message, Id}); // the broadcast makes the message to be sent to all others aside from you.
@@ -26,7 +42,7 @@ io.on('connection', socket => {
         
         for (let i = 0; i < all.length; i++){
             if (all[i].length != 20){
-                allrooms.push(all[i]);  //This helps elimit the client ids which are always 20 digits
+                allrooms.push(all[i]);  //This helps limit the client ids which are always 20 digits
             }
         }
 
@@ -47,7 +63,7 @@ io.on('connection', socket => {
         
         for (let i = 0; i < all.length; i++){
             if (all[i].length != 20){
-                allrooms.push(all[i]);  //This helps elimit the client ids which are always 20 digits
+                allrooms.push(all[i]);  //This helps limit the client ids which are always 20 digits
             }
         }
         socket.emit("retrieved-rooms2", (allrooms));
@@ -79,6 +95,12 @@ io.on('connection', socket => {
 
     socket.on("join-room", (requiredRoom) => {
         socket.join(requiredRoom);
+    })
+
+    socket.on("create-servers", (returnedServerDatabase) => {
+        for (let i = 0; i < returnedServerDatabase.length; i++){
+            socket.join(returnedServerDatabase[i])
+        }
     })
 })
 

@@ -5,7 +5,7 @@ const socket = io("http://localhost:3000");
 
 
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, child, push, update, get } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -26,6 +26,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
+socket.on("server-start", () => {
+    const dbRef = ref(getDatabase());
+        get(child(dbRef, 'servers')).then((snapshot) => {
+            if (snapshot.exists()) {
+                let returnedServerDatabase = Object.keys(snapshot.val());
+                socket.emit("create-servers", returnedServerDatabase)
+              } else {
+                console.log("No data available");
+              }
+        }).catch((error) => {
+            console.log(error);
+        })
+})
 
 socket.on('connect', () =>{
     connection();
@@ -272,12 +285,52 @@ const createReceiverMessage = (message) => {
 }
 
 const createdRoom = (allrooms) => {
+    let date = new Date();
     let value = allrooms.indexOf(roomName.value);
     let RoomName = DOMPurify.sanitize(roomName.value);
     if (roomName.value){
         if (value == -1 && RoomName.length != 20) {
-            create.style.display = "none";
+            create.style.display = "none";                                       ////////////////////////////
             socket.emit("create", RoomName);
+
+            const db = getDatabase();
+            set(ref(db, 'servers/' + RoomName), {
+            "list of users": "",
+            "messages": {
+                "01-06-2022": {
+                    "00:00": "",
+                    "01:00": "",
+                    "02:00": "",
+                    "03:00": "",
+                    "04:00": "",
+                    "05:00": "",
+                    "06:00": "",
+                    "07:00": "",
+                    "08:00": "",
+                    "09:00": "",
+                    "10:00": "",
+                    "11:00": "",
+                    "12:00": "",
+                    "13:00": "",
+                    "14:00": "",
+                    "15:00": "",
+                    "16:00": "",
+                    "17:00": "",
+                    "18:00": "",
+                    "19:00": "",
+                    "20:00": "",
+                    "21:00": "",
+                    "22:00": "",
+                    "23:00": ""
+                }
+            },
+            "number of users": "",
+            "password": "",
+            "room description": "",
+            "room name": RoomName,
+            "room picture": "",
+            "room type": ""
+            });
         } else if (RoomName.length == 20){
             roomName.style.border = "1px solid red";
             warning1.innerHTML = "A roomname cannot be exactly 20 characters";
@@ -391,15 +444,10 @@ document.getElementById("createroom").addEventListener("click", () => {
     roomName.value = ""
 })
 
-document.getElementById("created").addEventListener("click", () => {
+document.getElementById("created").addEventListener("click", () => { 
     if (roomName.value){
     socket.emit("retrieve-rooms2");
     }
-
-    const db = getDatabase();
-    set(ref(db, 'servers/'), {
-      server: roomName.value
-    });
 })
 
 document.getElementById("createdroomname").addEventListener("click", () => {
